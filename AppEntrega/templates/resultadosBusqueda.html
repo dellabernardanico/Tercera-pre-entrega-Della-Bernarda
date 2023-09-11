@@ -1,0 +1,15 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    <p>Resultados:</p>
+
+    {% if clases %}
+        <ul>
+            {% for clase in clases %}
+                <li>{{ clase.nombre }} - {{ clase.repeticiones}} clases semanales</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron clases con ese nombre.</p>
+    {% endif %}
+{% endblock contenidoQueCambia %}
