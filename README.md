@@ -1,2 +1,3 @@
 # Tercera-pre-entrega-Della-Bernarda
 Tercera pre-entrega Della Bernarda para el curso de Python orientado al Desarrollo Web de la pagina Coderhouse.
+Inician el servidor con el comando: python manage.py runserver. Luego pueden buscar clases previamente creadas como por ejemplo: Crossfit o Yoga, en la seccion de Instructores pueden agregar nuevos instructores (los campos de email y de profesion no son obligatorios), pueden agregar tambien alumnos como clases.
