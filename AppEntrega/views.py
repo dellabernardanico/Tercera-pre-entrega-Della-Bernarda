@@ -23,7 +23,7 @@ def claseFormulario(req):
             
             clase = Clase(nombre=nombre, repeticiones=repeticiones)
             clase.save()
-            return render(req, "exito.html")
+            return render(req, "inicio.html")
     else:
         miFormulario = ClaseFormulario()
         return render(req, "claseFormulario.html", {"miFormulario": miFormulario})
@@ -62,7 +62,7 @@ def alumnoFormulario(req):
             
             alumno = Alumnos(nombre=nombre, apellido=apellido, certificado_medico=True)
             alumno.save()
-            return render(req, "exito.html")
+            return render(req, "inicio.html")
     else:
         miFormulario = AlumnoFormulario()
         return render(req, "alumnoFormulario.html", {"miFormulario": miFormulario})
