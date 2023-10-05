@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    <form action="{% url 'Login' %}" method="post" class="formulario-login">
+        {% csrf_token %}
+        <div class="form-group" style="color: #fff;">
+            <label for="{{ miFormulario.username.id_for_label }}">Usuario:</label>
+            <input type="text" name="{{ miFormulario.username.name }}" id="{{ miFormulario.username.id }}" placeholder="Usuario">
+        </div>
+        
+        <div class="form-group" style="color: #fff;">
+            <label for="{{ miFormulario.password.id_for_label }}">Contraseña:</label>
+            <input type="password" name="{{ miFormulario.password.name }}" id="{{ miFormulario.password.id }}" placeholder="Contraseña">
+        </div>
+
+        <button type="submit" class="custom-button">Ingresar</button>
+    </form>
+
+    <p style="color: #fff;">¿No tienes una cuenta? <a href="{% url 'Registrar' %}" class="custom-button">Registrar</a></p>
+</div>
+{% endblock contenidoQueCambia %}
+

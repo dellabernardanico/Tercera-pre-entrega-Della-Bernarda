@@ -1,15 +1,33 @@
 {% extends 'padre.html' %}
 
 {% block contenidoQueCambia %}
-    <p>Resultados:</p>
+    <div class="resultados">
+        <h2 class="resultados-titulo">Resultados:</h2>
 
-    {% if clases %}
-        <ul>
-            {% for clase in clases %}
-                <li>{{ clase.nombre }} - {{ clase.repeticiones}} clases semanales</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No se encontraron clases con ese nombre.</p>
-    {% endif %}
+        {% if clases %}
+            <ul class="lista-clases">
+                {% for clase in clases %}
+                    <li>
+                        <div class="clase-info">
+                            <h3 class="clase-nombre">{{ clase.nombre }}</h3>
+                            <p class="clase-repeticiones">{{ clase.repeticiones }} clases semanales</p>
+                            <button id="imprimir-mensaje" class="custom-button">Inscribirse</button>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var botonImprimirMensaje = document.getElementById("imprimir-mensaje");
+    
+        botonImprimirMensaje.addEventListener("click", function() {
+            alert("Te has inscrito a esta clase!");
+        });
+    });
+    </script>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="no-resultados">No se encontraron clases con ese nombre.</p>
+        {% endif %}
+    </div>
 {% endblock contenidoQueCambia %}

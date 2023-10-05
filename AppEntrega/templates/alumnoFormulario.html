@@ -1,12 +1,26 @@
 {% extends 'padre.html' %}
 
 {% block contenidoQueCambia %}
-    <form action="{% url 'AlumnoFormulario' %}" method="post">{% csrf_token %}
-
-        {{miFormulario.as_p}}
-
-        <button type="submit"> Enviar </button>
+<h1 style="color: black;"> Inscribete como Alumno</h1>
+    <form action="{% url 'AlumnoFormulario' %}" method="post" class="formulario-instructores">
+        {% csrf_token %}
+        <div class="custom-input-group">
+            <input type="text" id="{{ miFormulario.nombre.id_for_label }}" name="{{ miFormulario.nombre.name }}" placeholder="Nombre">
+        </div>
+        <div class="custom-input-group">
+            <input type="text" id="{{ miFormulario.apellido.id_for_label }}" name="{{ miFormulario.apellido.name }}" placeholder="Apellido">
+        </div>
+        <div class="custom-input-group">
+            <input type="email" id="{{ miFormulario.email.id_for_label }}" name="{{ miFormulario.email.name }}" placeholder="Correo">
+        </div>
+        <div class="custom-input-group">
+            <label for="{{ miFormulario.certificado_medico.id_for_label }}">Certificado Médico:</label>
+            {{ miFormulario.certificado_medico }}
+        </div>
+        <button type="submit" class="custom-button"> Enviar </button>
     </form>
 
-
+    <form action="{% url 'ListaAlumnos' %}" method="get" class="formulario-instructores">
+        <button type="submit" class="custom-button ver-instructores"> Ver Alumnos </button>
+    </form>
 {% endblock contenidoQueCambia %}

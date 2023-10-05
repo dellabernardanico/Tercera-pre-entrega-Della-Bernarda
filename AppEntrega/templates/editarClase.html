@@ -1,0 +1,16 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    <form action="{% url 'EditarClase' id %}" method="post" class="formulario-instructores">{% csrf_token %}
+
+        <div class="custom-input-group">
+            <label for="{{ miFormulario.nombre.id_for_label }}">Nombre de la Clase:</label>
+            {{ miFormulario.nombre }}
+        </div>
+        <div class="custom-input-group">
+            <label for="{{ miFormulario.repeticiones.id_for_label }}">Repeticiones:</label>
+            {{ miFormulario.repeticiones }}
+        </div>
+        <button type="submit" class="custom-button">Actualizar</button>
+    </form>
+{% endblock contenidoQueCambia %}

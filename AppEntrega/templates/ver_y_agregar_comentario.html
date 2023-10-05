@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+<div class="publicaciones">
+    <!-- Formulario para agregar una nueva publicación -->
+    <form method="post" action="{% url 'agregar_publicacion' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Publicar</button>
+    </form>
+
+    <!-- Listado de publicaciones existentes -->
+    {% for publicacion in publicaciones %}
+        <div class="publicacion">
+            <h3>{{ publicacion.titulo }}</h3>
+            <p><strong>Autor: {{ publicacion.autor.username }}</strong></p>
+            <p>Fecha de publicación: {{ publicacion.fecha_publicacion }}</p>
+            <p>{{ publicacion.contenido }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock contenidoQueCambia %}

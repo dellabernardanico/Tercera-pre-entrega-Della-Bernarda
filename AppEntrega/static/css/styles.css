@@ -118,11 +118,23 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-weight: 700;
   line-height: 1.2;
 }
+.mi-estilo {
+  font-family: 'BebasNeue', sans-serif;
+  font-size: 48px;
+  line-height: 1.25;
+  font-stretch: ultra-condensed;
+}
+
+
 
 h1, .h1 {
   font-family: 'Anton', sans-serif;
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  font-weight: bold;
 }
+
 @media (min-width: 1200px) {
   h1, .h1 {
     font-size: 2.5rem;
@@ -3769,14 +3781,33 @@ textarea.form-control-lg {
   justify-content: space-between;
 }
 .navbar-brand {
-  padding-top: var(--bs-navbar-brand-padding-y);
-  padding-bottom: var(--bs-navbar-brand-padding-y);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
   margin-right: var(--bs-navbar-brand-margin-end);
-  font-size: var(--bs-navbar-brand-font-size);
+  font-size: 17px;
   color: var(--bs-navbar-brand-color);
   text-decoration: none;
   white-space: nowrap;
+  border-right: 1px solid rgba(30, 30, 30, 1);
+  border-left: 1px solid rgba(30, 30, 30, 1);
+  border-top: 1px solid rgba(30, 30, 30, 1);
+  border-bottom: 1px solid rgba(30, 30, 30, 1);
+  background-color: rgba(17, 17, 17, 1);
+  color: #999;
 }
+
+.fitness-vital-button {
+  border: none;
+  background-color: transparent !important;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}
+
+
+
 .navbar-brand:hover, .navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
 }
@@ -4141,6 +4172,7 @@ textarea.form-control-lg {
 }
 
 .navbar-dark {
+  background-color: rgba(17, 17, 17, 1);
   --bs-navbar-color: rgba(255, 255, 255, 0.55);
   --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
   --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
@@ -10843,32 +10875,31 @@ textarea.form-control-lg {
 
 header.masthead {
   position: relative;
-  background-color: #343a40;
+  background-color: transparent; /* Fondo transparente */
   background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
   background-size: cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
+
 header.masthead:before {
   content: "";
   position: absolute;
-  background-color: #1c375e;
+  background-color: #000; /* Color de fondo gris */
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.25;
 }
-header.masthead h1, header.masthead .h1 {
-  font-size: 2rem;
-}
+
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 12rem;
     padding-bottom: 12rem;
   }
   header.masthead h1, header.masthead .h1 {
-    font-size: 3rem;
+    font-size: 45px;
   }
 }
 

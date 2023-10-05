@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    <h2 style="color: black;">Comentarios</h2>
+    <div class="comentarios">
+        {% for comentario in comentarios %}
+            <div class="comentario">
+                <p><strong>{{ comentario.autor.username }}</strong></p>
+                <p>{{ comentario.contenido }}</p>
+                <p>{{ comentario.fecha }}</p>
+                
+                <!-- Botón para editar el comentario -->
+                <a href="{% url 'editar_comentario' comentario.id %}" class="custom-button">Editar</a>
+                
+                <!-- Botón para eliminar el comentario (puede incluir una confirmación) -->
+                <a href="{% url 'eliminar_comentario' comentario.id %}" class="custom-button">Eliminar</a>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'agregar_comentario' %}" class="custom-button custom-button-agregar-comentario">Agregar Comentario</a>
+
+{% endblock contenidoQueCambia %}

@@ -1,0 +1,21 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+  <h2 style="color: black;">Agregar Comentario</h2>
+  <form class="agregar-comentario" method="post" action="{% url 'agregar_comentario' %}">
+    {% csrf_token %}
+    <!-- <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" required>
+    </div> -->
+    <div class="form-group">
+      <label for="fecha">Fecha:</label>
+      <input type="date" name="fecha" id="fecha" required>
+    </div>
+    <div class="form-group">
+      <label for="contenido">Contenido del Comentario:</label>
+      <textarea name="contenido" id="contenido" rows="4" required></textarea>
+    </div>
+    <button type="submit">Agregar Comentario</button>
+  </form>
+{% endblock contenidoQueCambia %}

@@ -1,0 +1,15 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    <ul class="lista-clases">
+        {% for clase in clases %}
+            <li class="clase-item">
+                <span>{{ clase.nombre }} - {{ clase.repeticiones }} clases semanales</span>
+                <div class="botones">
+                    <a href="{% url 'EliminarClases' clase.id %}" class="eliminar">Eliminar</a>
+                    <a href="{% url 'EditarClase' clase.id %}" class="editar">Editar</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock contenidoQueCambia %}

@@ -1,0 +1,24 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    <form action="{% url 'EditarAlumnos' id %}" method="post" class="formulario-instructores">{% csrf_token %}
+
+        <div class="custom-input-group">
+            <label for="{{ miFormulario.nombre.id_for_label }}">Nombre:</label>
+            {{ miFormulario.nombre }}
+        </div>
+        <div class="custom-input-group">
+            <label for="{{ miFormulario.apellido.id_for_label }}">Apellido:</label>
+            {{ miFormulario.apellido }}
+        </div>
+        <div class="custom-input-group">
+            <label for="{{ miFormulario.email.id_for_label }}">Correo:</label>
+            {{ miFormulario.email }}
+        </div>
+        <div class="custom-input-group">
+            <label for="{{ miFormulario.certificado_medico.id_for_label }}">Certificado Médico:</label>
+            {{ miFormulario.certificado_medico }}
+        </div>        
+        <button type="submit" class="custom-button"> Actualizar </button>
+    </form>
+{% endblock contenidoQueCambia %}

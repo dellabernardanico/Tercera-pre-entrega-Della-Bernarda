@@ -1,3 +1,588 @@
-.home-button{
+.home-button {
     padding-right: 150px;
+}
+
+.clase-formulario {
+  background-color: #555;
+  color: #fff;
+  margin: 0;
+  border-radius: 0;
+  padding: 20px;
+}
+
+.clase-formulario input[type="text"] {
+  background-color: #444;
+  color: #888;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 15px;
+}
+
+.clase-formulario button[type="submit"] {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+.clase-formulario .custom-input-group {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.clase-formulario .custom-input {
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 15px;
+  flex: 1;
+}
+
+.clase-formulario .custom-button {
+  border: 1px solid #000; 
+  border-radius: 4px; 
+  padding: 5px 10px;
+  font-size: 15px;
+  margin-left: 5px;
+  background-color: #444;
+  color: #fff; 
+  cursor: pointer;
+}
+
+.mi-estilo {
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 2px;
+  line-height: 1;
+  font-family: "Oswald", sans-serif;
+  -webkit-text-stroke: 2px black;
+  color: rgb(87, 58, 68);
+}
+
+.col-xl-6.text-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.formulario-instructores {
+  background-color: #555;
+  color: #fff;
+  margin: 0;
+  border-radius: 0;
+  padding: 20px;
+  text-align: left;
+}
+
+.formulario-instructores label,
+.formulario-instructores input[type="text"],
+.formulario-instructores input[type="email"] {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 15px;
+}
+.formulario-instructores button[type="submit"] {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.formulario-instructores .custom-input-group {
+  display: flex;
+  align-items: center;
+}
+
+.formulario-instructores .custom-input {
+  flex: 1;
+}
+
+.formulario-instructores .custom-button {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.formulario-instructores input[type="email"] {
+  background-color: #444;
+  color: #fff;
+}
+
+.formulario-instructores .ver-instructores {
+  background-color: #444 !important;
+  border: 1px solid #444 !important;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  color: #888;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 15px;
+  
+}
+
+
+
+.lista-instructores {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #555; 
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+.instructor-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #555;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #222; 
+  color: #fff; 
+  border-radius: 10px; 
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+}
+
+.eliminar {
+    color: #fff;
+    background-color: #db1b1b;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.confirmar {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.editar {
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.editar:hover {
+  background-color: #222;
+}
+
+.cancelar {
+  background-color: #2350cc;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.confirmar-button {
+  background-color: #26b321;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.cancelar-button {
+  background-color: #9b332f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.contenedor-formulario {
+  background-color: #555; 
+  padding: 20px; 
+}
+
+body {
+  background-color: #555; 
+  margin: 0; 
+  padding: 0; 
+}
+
+
+.custom-input-group label {
+  color: #888; 
+}
+
+.custom-input-group input[type="number"] {
+  width: 75px;  font-size: 16px;  padding: 5px;  border: 0px solid #333;  border-radius: 5px;  margin: 5px 0;  background-color: #333;
+  color: #fff;
+}
+
+.logo {
+  width: 200px;   height: auto;   position: relative;   top: 15px;   left: 550px;   z-index: 1000; }
+
+.logo-nav {
+  width: 100px; 
+  height: auto; 
+  position: relative; 
+  top: 1px; 
+  left: 20px; 
+  z-index: 1000; 
+}
+
+
+/* .lista-clases {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-clases li {
+  background-color: #222;
+  border: 1px solid #222;
+  color: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.clase-info h3 {
+  margin: 0;
+  font-size: 20px;
+  color: red;
+}
+
+.clase-info p {
+  margin: 0;
+  color: white;
+}
+
+.resultados {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.resultados-busqueda {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #555; 
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+.lista-clases {
+  list-style: none;
+  padding: 0;
+  background-color: #555; 
+  max-width: 600px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+.clase-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #555;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #222; 
+  color: #fff; 
+  border-radius: 10px; 
+}
+
+.formulario-clases .custom-button {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.formulario-clases {
+  background-color: #555;
+  color: #fff;
+  margin: 0;
+  border-radius: 0;
+  padding: 20px;
+  text-align: left;
+} 
+
+.resultados-titulo {
+  color: #fff;
+  font-size: 24px;
+  background-color: #555;
+  padding: 10px;
+}
+
+.lista-clases {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-clases li {
+  background-color: #222;
+  border: 1px solid #555;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.clase-nombre {
+  color: #fff; 
+  font-size: 18px;
+  margin: 5px;
+}
+
+.clase-repeticiones {
+  color: #fff; 
+  font-size: 16px;
+  margin: 5px;
+}
+
+.no-resultados {
+  color: #fff;
+  background-color: #555;
+  padding: 10px;
+}
+
+.formulario-login {
+  background-color: #555;
+  color: #fff;
+  margin: 0;
+  border-radius: 0;
+  padding: 20px;
+  text-align: left;
+}
+
+.formulario-login label,
+.formulario-login input[type="text"],
+.formulario-login input[type="password"] {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 15px;
+}
+
+.formulario-login button[type="submit"] {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.custom-button {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.formulario-login {
+  background-color: #555;
+  color: #fff;
+  margin: 0;
+  border-radius: 0;
+  padding: 20px;
+  text-align: left;
+}
+
+.formulario-login label,
+.formulario-login input[type="text"],
+.formulario-login input[type="password"] {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 15px;
+}
+
+
+.formulario-login button[type="submit"] {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+.custom-button {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ver-comentarios-button a.custom-button {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 20px; 
+  display: block; 
+  text-align: center;
+  text-decoration: none;
+  width: 150px
+}
+
+ver-comentarios-button a.custom-button:hover {
+  background-color: #111;   border: 1px solid #111; }
+
+
+
+.comentarios {
+  background-color: #111; 
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.comentario {
+  background-color: #888;  padding: 15px;
+  border: 1px solid #000;  border-radius: 4px;
+  margin: 10px 0}
+
+.comentario p {
+  font-size: 16px;
+  margin: 5px 0; }
+
+.comentario a {
+  background-color: #222;   color: #fff;   border: 1px solid #222;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-right: 10px;   text-decoration: none;
+}
+
+.comentario a:hover {
+  background-color: #111; 
+  border: 1px solid #111;
+}
+
+
+.custom-button-agregar-comentario {
+  background-color: #222; 
+  color: #fff; 
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 20px; 
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block; 
+  text-decoration: none; 
+}
+
+.agregar-comentario {
+  background-color: #333; 
+  color: #fff; 
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.agregar-comentario label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.agregar-comentario input[type="text"],
+.agregar-comentario input[type="date"],
+.agregar-comentario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #444; 
+  color: #fff;
+}
+
+.agregar-comentario button[type="submit"] {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.agregar-comentario button[type="submit"]:hover {
+  background-color: #000; 
 }

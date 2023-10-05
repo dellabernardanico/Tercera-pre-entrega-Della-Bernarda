@@ -1,10 +1,20 @@
 {% extends 'padre.html' %}
 
 {% block contenidoQueCambia %}
-    <form action="{% url 'Buscar' %}" method="get">
+<!-- {% block logo %}
+<img src="../../static/assets/img/logo.jpg" alt="logo" class="logo">
+{% endblock %} -->
 
-        <p>clase: <input type="text" name="nombre"></p>
+    {{mensaje}}
+<form action="{% url 'Buscar' %}" method="get" class="clase-formulario">
+    <div class="custom-input-group">
+        <input type="text" name="nombre" placeholder="Ingrese nombre de la clase" class="custom-input">
+        <button type="submit" class="custom-button">Buscar</button>
+    </div>
+</form>
+<div class="ver-comentarios-button">
+    <a href="{% url 'ver_comentarios' %}" class="custom-button">Ver Comentarios</a>
+</div>
 
-        <button type="submit"> Enviar </button>
-    </form>
 {% endblock contenidoQueCambia %}
+

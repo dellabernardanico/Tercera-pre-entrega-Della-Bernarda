@@ -1,0 +1,21 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+    <h2>Editar Comentario</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="{{ form.nombre.id_for_label }}">Nombre:</label>
+            <input type="text" name="{{ form.nombre.name }}" id="{{ form.nombre.id }}" value="{{ comentario.nombre }}" required>
+        </div>
+        <div class="form-group">
+            <label for="{{ form.fecha.id_for_label }}">Fecha:</label>
+            <input type="date" name="{{ form.fecha.name }}" id="{{ form.fecha.id }}" value="{{ comentario.fecha|date:'Y-m-d' }}" required>
+        </div>
+        <div class="form-group">
+            <label for="{{ form.contenido.id_for_label }}">Contenido del Comentario:</label>
+            <textarea name="{{ form.contenido.name }}" id="{{ form.contenido.id }}" rows="4" required>{{ comentario.contenido }}</textarea>
+        </div>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+{% endblock contenidoQueCambia %}
