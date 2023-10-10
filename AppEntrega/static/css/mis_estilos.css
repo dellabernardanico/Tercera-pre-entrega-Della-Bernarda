@@ -586,3 +586,46 @@ ver-comentarios-button a.custom-button:hover {
 .agregar-comentario button[type="submit"]:hover {
   background-color: #000; 
 }
+
+.informacion-instructor-cuadro {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 4px;
+  color: #888; /* Color de texto más claro */
+  margin: 20px; /* Margen igual en todos los lados */
+}
+
+.informacion-instructor-cuadro h3 {
+  color: #fff;
+}
+
+.informacion-instructor-cuadro p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.informacion-instructor-cuadro ul li {
+  color: #888; /* Color de texto más claro */
+}
+
+
+.informacion-alumno-cuadro {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 4px;
+  color: #888; /* Color de texto más claro */
+  margin: 20px; /* Margen igual en todos los lados */
+}
+
+.informacion-alumno-cuadro h3 {
+  color: #fff;
+}
+
+.informacion-alumno-cuadro p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.informacion-alumno-cuadro ul li {
+  color: #888; /* Color de texto más claro */
+}

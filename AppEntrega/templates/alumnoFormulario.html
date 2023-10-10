@@ -1,26 +1,42 @@
 {% extends 'padre.html' %}
 
 {% block contenidoQueCambia %}
-<h1 style="color: black;"> Inscribete como Alumno</h1>
-    <form action="{% url 'AlumnoFormulario' %}" method="post" class="formulario-instructores">
-        {% csrf_token %}
-        <div class="custom-input-group">
-            <input type="text" id="{{ miFormulario.nombre.id_for_label }}" name="{{ miFormulario.nombre.name }}" placeholder="Nombre">
+<div class="row">
+    <div class="col-md-6">
+        <form action="{% url 'AlumnoFormulario' %}" method="post" class="formulario-instructores">
+            {% csrf_token %}
+            <div class="custom-input-group">
+                <input type="text" id="{{ miFormulario.nombre.id_for_label }}" name="{{ miFormulario.nombre.name }}" placeholder="Nombre">
+            </div>
+            <div class="custom-input-group">
+                <input type="text" id="{{ miFormulario.apellido.id_for_label }}" name="{{ miFormulario.apellido.name }}" placeholder="Apellido">
+            </div>
+            <div class="custom-input-group">
+                <input type="email" id="{{ miFormulario.email.id_for_label }}" name="{{ miFormulario.email.name }}" placeholder="Correo">
+            </div>
+            <div class="custom-input-group">
+                <label for="{{ miFormulario.certificado_medico.id_for_label }}">Certificado Médico:</label>
+                {{ miFormulario.certificado_medico }}
+            </div>
+            <button type="submit" class="custom-button">Enviar</button>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <div class="informacion-instructor">
+            <div class="informacion-instructor-cuadro">
+                <h3>Beneficios para Alumnos</h3>
+            <p>Descubre los beneficios que ofrecemos a nuestros alumnos:</p>
+            <ul>
+                <li>Clases de alta calidad.</li>
+                <li>Profesores capacitados.</li>
+                <li>Entrenamientos personalizados.</li>
+                <li>Acceso a instalaciones de última generación.</li>
+            </ul>
+            </div>
         </div>
-        <div class="custom-input-group">
-            <input type="text" id="{{ miFormulario.apellido.id_for_label }}" name="{{ miFormulario.apellido.name }}" placeholder="Apellido">
-        </div>
-        <div class="custom-input-group">
-            <input type="email" id="{{ miFormulario.email.id_for_label }}" name="{{ miFormulario.email.name }}" placeholder="Correo">
-        </div>
-        <div class="custom-input-group">
-            <label for="{{ miFormulario.certificado_medico.id_for_label }}">Certificado Médico:</label>
-            {{ miFormulario.certificado_medico }}
-        </div>
-        <button type="submit" class="custom-button"> Enviar </button>
-    </form>
-
-    <form action="{% url 'ListaAlumnos' %}" method="get" class="formulario-instructores">
-        <button type="submit" class="custom-button ver-instructores"> Ver Alumnos </button>
-    </form>
+    </div>
+    
+<form action="{% url 'ListaAlumnos' %}" method="get" class="formulario-instructores">
+    <button type="submit" class="custom-button ver-instructores">Ver Alumnos Inscriptos</button>
+</form>
 {% endblock contenidoQueCambia %}

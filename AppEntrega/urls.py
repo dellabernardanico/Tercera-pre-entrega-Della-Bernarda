@@ -30,5 +30,4 @@ urlpatterns = [
     path('editar_comentario/<int:comentario_id>/', editar_comentario, name='editar_comentario'),
     path('eliminar_comentario/<int:comentario_id>/', eliminar_comentario, name='eliminar_comentario'),
     path('acerca-nosotros/', acerca_nosotros , name='acerca_nosotros'),
-
 ]

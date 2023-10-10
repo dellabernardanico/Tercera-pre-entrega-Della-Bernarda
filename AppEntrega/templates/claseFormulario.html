@@ -1,21 +1,36 @@
 {% extends 'padre.html' %}
 
 {% block contenidoQueCambia %}
-<h1 style="color: black;"> Registre una nueva Clase!</h1>
-    <form action="{% url 'ClaseFormulario' %}" method="post" class="formulario-instructores">{% csrf_token %}
-
-        <div class="custom-input-group">
-            <input type="text" id="{{ miFormulario.nombre.id_for_label }}" name="{{ miFormulario.nombre.name }}" placeholder="Nombre de la clase">
+<div class="row">
+    <div class="col-md-6">
+        <form action="{% url 'ClaseFormulario' %}" method="post" class="formulario-instructores">
+            {% csrf_token %}
+            <div class="custom-input-group">
+                <input type="text" id="{{ miFormulario.nombre.id_for_label }}" name="{{ miFormulario.nombre.name }}" placeholder="Nombre de la clase">
+            </div>
+            <div class="custom-input-group">
+                <label for="{{ miFormulario.repeticiones.id_for_label }}">Repeticiones:</label>
+                {{ miFormulario.repeticiones }}
+            </div>
+            <button type="submit" class="custom-button">Enviar</button>
+            <form action="{% url 'ListaClases' %}" method="get" class="formulario-instructores">
+                <button type="submit" class="custom-button ver-instructores">Ver Clases</button>
+            </form>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <div class="informacion-instructor-cuadro">
+            <h3>Información al Agregar Nuevas Clases</h3>
+            <p>En FitnessVital, buscamos constantemente ampliar y mejorar nuestra oferta de clases para brindar a nuestros alumnos una experiencia enriquecedora. Al agregar una nueva clase, deseamos:</p>
+            <ul>
+                <li>Ofrecer variedad y opciones a nuestros alumnos, permitiéndoles diversificar sus rutinas de entrenamiento.</li>
+                <li>Satisfacer las necesidades de diferentes niveles de condición física, desde principiantes hasta atletas avanzados.</li>
+                <li>Introducir enfoques innovadores y técnicas efectivas de entrenamiento para mantenernos actualizados con las tendencias en salud y bienestar.</li>
+                <li>Fomentar un ambiente inclusivo y de apoyo, donde nuestros alumnos se sientan motivados y comprometidos en su viaje hacia el fitness.</li>
+                <li>Proporcionar oportunidades para que instructores talentosos y apasionados compartan su experiencia y conocimientos con la comunidad FitnessVital.</li>
+            </ul>
+            <p>Si tienes una nueva clase en mente que cumple con estos objetivos, ¡estamos emocionados de escuchar tus propuestas! Esperamos que tu clase enriquezca nuestra oferta y ayude a nuestros alumnos a alcanzar sus metas de bienestar y acondicionamiento físico.</p>
         </div>
-        <div class="custom-input-group">
-            <label for="{{ miFormulario.repeticiones.id_for_label }}">Repeticiones:</label>
-            {{ miFormulario.repeticiones }}
-        </div>
-        
-                
-        <button type="submit" class="custom-button"> Enviar </button>
-        <a href="{% url 'ListaClases' %}" class="custom-button ver-clases">Ver Clases</a>
-    </form>
-
-
-{% endblock contenidoQueCambia %}   
+    </div>
+</div>
+{% endblock contenidoQueCambia %}

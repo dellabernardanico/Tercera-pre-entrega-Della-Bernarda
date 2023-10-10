@@ -1,26 +1,41 @@
 {% extends 'padre.html' %}
 
 {% block contenidoQueCambia %}
- <h1 style="color: black;"> Inscribete como Instructor</h1>
-    <form action="{% url 'InstructorFormulario' %}" method="post" class="formulario-instructores">
-        {% csrf_token %}
-        <div class="custom-input-group">
-            <input type="text" id="{{ miFormulario.nombre.id_for_label }}" name="{{ miFormulario.nombre.name }}" placeholder="Nombre">
+<div class="row">
+    <div class="col-md-6">
+        <form action="{% url 'InstructorFormulario' %}" method="post" class="formulario-instructores">
+            {% csrf_token %}
+            <div class="custom-input-group">
+                <input type="text" id="{{ miFormulario.nombre.id_for_label }}" name="{{ miFormulario.nombre.name }}" placeholder="Nombre">
+            </div>
+            <div class="custom-input-group">
+                <input type="text" id="{{ miFormulario.apellido.id_for_label }}" name="{{ miFormulario.apellido.name }}" placeholder="Apellido">
+            </div>
+            <div class="custom-input-group">
+                <input type="email" id="{{ miFormulario.email.id_for_label }}" name="{{ miFormulario.email.name }}" placeholder="Correo">
+            </div>
+            <div class="custom-input-group">
+                <input type="text" id="{{ miFormulario.profesion.id_for_label }}" name="{{ miFormulario.profesion.name }}" placeholder="Profesión">
+            </div>
+            <button type="submit" class="custom-button">Enviar</button>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <div class="informacion-instructor">
+            <div class="informacion-instructor-cuadro">
+                <h3>Información para Instructores</h3>
+                <p>Como instructor en FitnessVital, tendrás la oportunidad de:</p>
+                <ul>
+                    <li>Guiar a los alumnos en su desarrollo físico y mental.</li>
+                    <li>Diseñar y dirigir clases personalizadas.</li>
+                    <li>Fomentar un ambiente de apoyo y motivación.</li>
+                </ul>
+                <p>¡Únete a nuestro equipo y ayúdanos a inspirar a más personas a alcanzar sus objetivos!</p>
+            </div>
         </div>
-        <div class="custom-input-group">
-            <input type="text" id="{{ miFormulario.apellido.id_for_label }}" name="{{ miFormulario.apellido.name }}" placeholder="Apellido">
-        </div>
-        <div class="custom-input-group">
-            <input type="email" id="{{ miFormulario.email.id_for_label }}" name="{{ miFormulario.email.name }}" placeholder="Correo">
-        </div>
-        <div class="custom-input-group">
-            <input type="text" id="{{ miFormulario.profesion.id_for_label }}" name="{{ miFormulario.profesion.name }}" placeholder="Profesión">
-        </div>
-        <button type="submit" class="custom-button"> Enviar </button>
-    </form>
-
-    <form action="{% url 'ListaInstructores' %}" method="get" class="formulario-instructores">
-        <button type="submit" class="custom-button ver-instructores"> Ver Instructores Existentes </button>
-    </form>
+    </div>
     
+<form action="{% url 'ListaInstructores' %}" method="get" class="formulario-instructores">
+    <button type="submit" class="custom-button ver-instructores">Ver Instructores Existentes</button>
+</form>
 {% endblock contenidoQueCambia %}
